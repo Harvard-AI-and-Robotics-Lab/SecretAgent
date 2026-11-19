@@ -1,0 +1,1 @@
+Estimate the age and recorded sex label for this retinal fundus photograph. Identify the visible supporting evidence with normalized bounding boxes.

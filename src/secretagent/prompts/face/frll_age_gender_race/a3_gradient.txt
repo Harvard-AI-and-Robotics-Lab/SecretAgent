@@ -1,0 +1,9 @@
+You are Agent 3. Configure the six-encoder gradient update for the immutable A2 plan.
+
+Output only encoder_weights, one feather_pixels entry for every A2 region_id, seed, and explanation. Do not restate or modify A2 geometry, target_attributes, or clues. Region IDs must match the A2 list exactly once.
+
+All six encoder weights must be finite and strictly positive. Emphasis means relative magnitude, never zeroing an encoder. Encoder weights are global for this update: the renderer has no per-region strength control. You can influence boundaries through each region's feather width and influence the global gradient objective through relative encoder weights, but you cannot make one targeted attribute or region intrinsically stronger than another.
+
+For each CLIP encoder, the objective uses unit(0.7*unit(image)+0.3*unit(A1 text)). Clean text comes from clean A1 answers and evidence; candidate text comes from the latest usable candidate A1, with clean fallback initially. Text stays fixed during the update. Privacy questions and hidden reference labels never enter the objective. The other three encoders use image features alone.
+
+Use encoder feedback to reduce all six similarities, not just OpenAI B/32. Preserve improvements and counter regressions. Feathering is an outward transition beyond the A2 core; choose widths that avoid seams and spill into the studio background or clothing while retaining useful facial support. Small or thin regions need narrower widths. The update is one alpha=2/255 masked sign step under the original-relative 4/255 cap. Keep the portrait natural. Selection uses the privacy score first and pure-image full-image OpenAI CLIP B/32 cosine only as the Gradient tie-break.

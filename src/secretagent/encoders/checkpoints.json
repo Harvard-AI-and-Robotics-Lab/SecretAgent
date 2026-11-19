@@ -1,0 +1,34 @@
+{
+  "clip_openai_b32": {
+    "repo": "openai/clip-vit-base-patch32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+  },
+  "clip_openai_b16": {
+    "repo": "openai/clip-vit-base-patch16",
+    "revision": "57c216476eefef5ab752ec549e440a49ae4ae5f3"
+  },
+  "clip_laion_g14": {
+    "repo": "laion/CLIP-ViT-G-14-laion2B-s12B-b42K",
+    "revision": "4b0305adc6802b2632e11cbe6606a9bdd43d35c9"
+  },
+  "dinov3_vision": {
+    "repo": "facebook/dinov3-vitl16-pretrain-lvd1689m",
+    "revision": "ea8dc2863c51be0a264bab82070e3e8836b02d51"
+  },
+  "internvl35_projected": {
+    "repo": "OpenGVLab/InternVL3_5-2B",
+    "revision": "7d7bd7bcc35b77b391883ebd7f9686cfa0e25cc0",
+    "prefix": "vision_model.",
+    "sha256": "af494d700052011c4b5ed6dc540e88d8e8a6b50c000cc4ee16365476cc1bf122",
+    "projector_prefix": "mlp1.",
+    "projector_sha256": "20834ffc88cda4e3ac986e0b93ea0348c6afb5cfa5773dc8ff36d075510e9bbe"
+  },
+  "gemma4_projected": {
+    "repo": "google/gemma-4-31B-it",
+    "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "prefix": "model.vision_tower.",
+    "sha256": "61c237a41282bde4d51bf6a71a9ccf23fd4f89c1f6ac167b34e2d875c24d4fee",
+    "projector_prefix": "model.embed_vision.",
+    "projector_sha256": "7f41c77cbb8e56657dd5f660a80ebbec9ac209ce72b6f9d54ac74c0fc94a5af1"
+  }
+}

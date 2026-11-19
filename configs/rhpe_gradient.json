@@ -1,0 +1,51 @@
+{
+  "dataset": "rhpe",
+  "method": "gradient",
+  "epsilon_pixels": 4,
+  "alpha_pixels": 2,
+  "rounds": 10,
+  "validation_attempts": 3,
+  "device": "cuda:0",
+  "encoders": {
+    "clip_openai_b32": "${SECRETAGENT_MODELS}/clip_openai_b32",
+    "clip_openai_b16": "${SECRETAGENT_MODELS}/clip_openai_b16",
+    "clip_laion_g14": "${SECRETAGENT_MODELS}/clip_laion_g14",
+    "internvl35_projected": "${SECRETAGENT_MODELS}/internvl35_projected",
+    "gemma4_projected": "${SECRETAGENT_MODELS}/gemma4_projected",
+    "dinov3_vision": "${SECRETAGENT_MODELS}/dinov3_vision"
+  },
+  "agents": {
+    "a1": {
+      "backend": "openai_chat",
+      "model": "medgemma-27b-rhpe-lora",
+      "key_env": "MEDICAL_API_KEY",
+      "base_url": "http://127.0.0.1:8000/v1",
+      "reasoning": "none",
+      "temperature": 0
+    },
+    "a2": {
+      "backend": "openai_responses",
+      "model": "gpt-6-luna",
+      "key_env": "OPENAI_API_KEY",
+      "base_url": "https://api.openai.com/v1",
+      "reasoning": "medium",
+      "temperature": null
+    },
+    "a3": {
+      "backend": "openai_responses",
+      "model": "gpt-6-luna",
+      "key_env": "OPENAI_API_KEY",
+      "base_url": "https://api.openai.com/v1",
+      "reasoning": "medium",
+      "temperature": null
+    },
+    "a4": {
+      "backend": "anthropic",
+      "model": "claude-haiku-5-5",
+      "key_env": "ANTHROPIC_API_KEY",
+      "base_url": "https://api.anthropic.com/v1",
+      "reasoning": "none",
+      "temperature": null
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Estimate the age in completed years of the adult shown. Return exactly one integer from 0 to 120.

@@ -1,0 +1,1 @@
+Predict the self-reported face_eth category, called race in this experiment. Return exactly white, black, east_asian, west_asian, or east_asian/white.

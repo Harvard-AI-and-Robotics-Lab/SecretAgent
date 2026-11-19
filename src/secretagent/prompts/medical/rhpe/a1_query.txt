@@ -1,0 +1,1 @@
+Estimate the chronological age in months (not bone age) and recorded sex label for this hand and wrist radiograph. Identify the visible supporting evidence with normalized bounding boxes.
