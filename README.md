@@ -1,13 +1,11 @@
 <div align="center">
 
-# 🕵️ SecretAgent
+# 🛡️ SecretAgent
 
 ### A Multi-Agent Framework for Privacy Protection against Vision Language Models
 
 **Minda Zhao · Yue Zhang · Mengyu Wang**<br>
-**Harvard University**
-
-Code accompanying the SecretAgent manuscript.
+<img src="assets/harvard_crest.png" alt="Harvard University crest" height="20" align="absmiddle"> **Harvard University**
 
 [**Overview**](#-overview) |
 [**Code**](#-released-code) |
